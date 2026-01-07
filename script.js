@@ -323,8 +323,11 @@ function initSetupSelection() {
     // If we're not on the setup page, exit
     if (!setupCards.length) return;
     
-    // Helper function to trigger animations
+    // Helper function to trigger animations and scroll to top
     function triggerAnimations(section) {
+        // Scroll to top smoothly
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
         const animatedElements = section.querySelectorAll('.step-card, .dcontrol-card, .dcontrol-steps, .steps-actions');
         animatedElements.forEach(el => {
             el.style.animation = 'none';
