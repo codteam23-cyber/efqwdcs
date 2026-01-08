@@ -1669,8 +1669,16 @@ body {
         gap: 12px;
     }
     
-    .nav-links a:not(.nav-discord) {
+    .nav-links a:not(.nav-discord):not([href*="setup"]) {
         display: none;
+    }
+    
+    .nav-links a[href*="setup"] {
+        font-size: 13px;
+        padding: 8px 14px;
+        background: rgba(255, 26, 26, 0.1);
+        border: 1px solid rgba(255, 26, 26, 0.3);
+        border-radius: 8px;
     }
     
     .nav-discord {
